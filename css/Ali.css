@@ -1,0 +1,55 @@
+.accordion-wrapper {
+    width: 94%;
+    margin: 0 auto;
+}
+.accordion-wrapper:hover .accordion a{
+  color: black;
+}
+.accordion-wrapper:hover .accordion::after {
+  content: "\002B";
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.accordion-wrapper:hover .active::after {
+  content: "\00d7";
+}
+.accordion {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid black;    
+    border-bottom: none;
+    border-left: none;
+    border-right: none; 
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+.accordion a{
+    text-decoration: none;
+    color: rgba(0, 0, 255, 0.571);
+    font-weight:bold;
+    font-size: 1.6rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;  
+}
+img{
+  padding-bottom: 20px;
+}
+@media (max-width:52rem) {
+  .accordion a{
+    font-size: 1rem;
+  }
+}
